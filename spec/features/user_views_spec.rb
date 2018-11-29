@@ -13,6 +13,7 @@ RSpec.describe "As a visitor" do
       expect(page).to have_content(special.special_name)
       expect(page).to have_content(special.run_time)
       expect(page).to have_css("img[src*='#{special.thumbnail}']")
+      expect(page).to have_content(Special.all.size)
     end
   end
 
