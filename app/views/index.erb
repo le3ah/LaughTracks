@@ -19,7 +19,7 @@
               <h5 class="card-title"><%= comedian.name %></h5>
               <p class="card-text"><%="Age: #{comedian.age}, born in #{comedian.city}" %></p>
                 <% comedian.specials.each do |special| %>
-                  <img class="card-img-left" src=<%=special.thumbnail%>> <ul>
+                  <img class="card-img-left" src="<%= special.thumbnail %>"> <ul>
                   <li><em><%= special.special_name %></em></li>
                   <li><%= special.run_time %> min</li>
                 </ul>

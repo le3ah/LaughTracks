@@ -26,5 +26,15 @@ RSpec.describe "As a visitor" do
 
     visit '/comedians'
     expect(page).to have_content(special.run_time)
-  end 
+  end
+
+  it "they see a thumbnail image" do
+    comedian = Comedian.create(name: "Demetri Martin", age: 45, city: "New York City")
+
+    special = comedian.specials.create(special_name: "Demetri Martin: The Overthinker", run_time: 54, thumbnail: "/images/specials/the-overthinker.jpg")
+
+    visit '/comedians'
+    expect(page).to have_css("img[src*='#{special.thumbnail}']")
+    # expect(page).to have_css("img[src*='environ-peeling-kuur.jpg']")
+  end
 end
