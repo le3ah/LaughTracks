@@ -16,7 +16,15 @@ RSpec.describe "As a visitor" do
     special = comedian.specials.create(special_name: "Demetri Martin: The Overthinker", run_time: 54)
 
     visit '/comedians'
-    save_and_open_page
-    expect(page).to have_content(special.name)
+    expect(page).to have_content(special.special_name)
   end
+
+  it "they see the length of each special's run-time in minutes" do
+    comedian = Comedian.create(name: "Demetri Martin", age: 45, city: "New York City")
+
+    special = comedian.specials.create(special_name: "Demetri Martin: The Overthinker", run_time: 54)
+
+    visit '/comedians'
+    expect(page).to have_content(special.run_time)
+  end 
 end
