@@ -7,5 +7,8 @@ class Comedian < ActiveRecord::Base
     average(:age).to_i
   end
 
+  def self.unique_cities
+    distinct.pluck(:city).join(', ')
+  end
 
 end
