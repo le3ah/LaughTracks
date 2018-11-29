@@ -4,7 +4,7 @@ RSpec.describe "As a visitor" do
     Comedian.create(name: "Demetri Martin", age: 45, city: "New York City")
 
     visit '/comedians'
-
-    expect(Comedian.average_age).to eq(51)
+    expect(page).to have_content(Comedian.average_age)
+    expect(Comedian.average_age).to eq(50)
   end
 end

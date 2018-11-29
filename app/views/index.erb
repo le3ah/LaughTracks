@@ -12,6 +12,7 @@
   </head>
   <body>
     <h1>Statistics</h1>
+    <p><%= "The average age of all comedians on this site is #{Comedian.average_age}" %></p>
     <div class="card-columns">
       <% @comedians.each do |comedian| %>
 
