@@ -37,4 +37,10 @@ RSpec.describe "As a visitor" do
     expect(page).to have_css("img[src*='#{special.thumbnail}']")
     # expect(page).to have_css("img[src*='environ-peeling-kuur.jpg']")
   end
+
+  it "they an area of the page called 'Statistics'" do
+
+    visit '/comedians'
+    expect(page).to have_content('Statistics')
+  end
 end
