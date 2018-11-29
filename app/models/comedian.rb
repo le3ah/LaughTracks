@@ -11,4 +11,8 @@ class Comedian < ActiveRecord::Base
     distinct.pluck(:city).join(', ')
   end
 
+  def self.find_by_age
+    find(params[:age])
+  end
+
 end
