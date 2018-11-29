@@ -5,6 +5,9 @@ class LaughTracksApp < Sinatra::Base
     else
       @comedians = Comedian.all
     end
+      @average_age = Comedian.average_age
+      @average_run_time = Special.average_run_time
+      @unique_cities = Comedian.unique_cities
     erb :index
   end
 

@@ -11,11 +11,11 @@
     <title>Laugh Tracks!</title>
   </head>
   <body>
-    <div>
+    <div id="stats">
       <h1>Statistics</h1>
-        <p><%= "The average age of all comedians on this site is #{Comedian.average_age}." %></p>
-        <p><%= "The average run time of all TV specials on this site is #{Special.average_run_time} minutes." %></p>
-        <p><%= "The comedians on this site hail from multiple cities in the U.S. & Canada, including #{Comedian.unique_cities}." %></p>
+        <p>The average age of all comedians on this site is <%=  @average_age %>.</p>
+        <p>The average run time of all TV specials on this site is <%= @average_run_time %> minutes.</p>
+        <p>The comedians on this site hail from multiple cities in the U.S. & Canada, including <%= @unique_cities.join(', ') %>.</p>
     </div>
 
     <div class="card-columns">

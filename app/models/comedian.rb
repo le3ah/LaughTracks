@@ -8,11 +8,7 @@ class Comedian < ActiveRecord::Base
   end
 
   def self.unique_cities
-    distinct.pluck(:city).join(', ')
-  end
-
-  def self.find_by_age
-    find(params[:age])
+    distinct.pluck(:city)
   end
 
 end
