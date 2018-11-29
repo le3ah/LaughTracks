@@ -1,8 +1,9 @@
 class CreateSpecials < ActiveRecord::Migration[5.2]
   def change
     create_table :specials do |t|
-      t.string  :name
+      t.string  :special_name
       t.integer :run_time
+      t.string  :thumbnail
 
       t.timestamps null: false
     end

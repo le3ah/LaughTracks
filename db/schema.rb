@@ -19,11 +19,14 @@ ActiveRecord::Schema.define(version: 2018_11_28_224826) do
     t.text "name"
     t.integer "age"
     t.text "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "specials", force: :cascade do |t|
-    t.string "name"
+    t.string "special_name"
     t.integer "run_time"
+    t.string "thumbnail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
