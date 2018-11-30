@@ -28,6 +28,19 @@ RSpec.describe "As a visitor" do
   it "they see a form to input a new comedian into the database" do
 
     visit '/comedians/new'
-    expect(page).to have_content('New Comedian')
+    comedian_name = 'Frank'
+    comedian_age = 41
+    comedian_hometown = 'Cullman'
+    fill_in 'comedian[name]', with: comedian_name
+    fill_in 'comedian[age]', with: comedian_age
+    fill_in 'comedian[city]', with: comedian_hometown
+
+    click_button 'Submit'
+
+    expect(current_path).to eq('/comedians')
+
+    expect(page).to have_content(comedian_name)
+    expect(page).to have_content(comedian_age)
+    expect(page).to have_content(comedian_hometown)
   end
 end
