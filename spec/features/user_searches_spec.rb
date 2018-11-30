@@ -6,6 +6,7 @@ RSpec.describe "As a visitor" do
 
     visit '/comedians?age=34'
 
+    expect(page).to have_content('Statistics')
     expect(page).to have_content(comedian_2.name)
     expect(page).to have_no_content(comedian_1.name)
     expect(page).to have_no_content(comedian_3.name)

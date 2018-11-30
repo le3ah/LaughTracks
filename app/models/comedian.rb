@@ -11,8 +11,4 @@ class Comedian < ActiveRecord::Base
     distinct.pluck(:city)
   end
 
-  def self.specials_count
-    Special.all.size
-  end
-
 end
