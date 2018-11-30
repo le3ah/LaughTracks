@@ -24,4 +24,9 @@ RSpec.describe "As a visitor" do
       expect(page).to have_content('Statistics')
     end
   end
+
+  it "they see a form to input a new comedian into the database" do
+
+    visit '/comedians/new'
+  end
 end
