@@ -1,7 +1,12 @@
 header  {
   background-color: lightblue;
 }
-
+.card-columns {
+  padding-left: 20px;
+}
+.specials   {
+  padding-left: 10px;
+}
 body  {
   background-color: lightblue;
 }
@@ -17,6 +22,7 @@ ul  {
   grid-template-columns: 2fr 2fr;
   grid-gap: 1px;
   grid-auto-rows: minmax(1px, auto);
+  text-align: center;
 }
 img {
   height: 55px;
