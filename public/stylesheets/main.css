@@ -5,17 +5,26 @@ header  {
 body  {
   background-color: lightblue;
 }
+ul  {
+  list-style: none;
+}
+#click-below  {
+  font-size: 25px;
+  text-align: center;
+}
 #stats  {
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-gap: 1px;
-  grid-auto-rows: minmax(10px, auto);
+  grid-auto-rows: minmax(1px, auto);
 }
 img {
   height: 55px;
   float: left;
 }
-
+a  {
+  text-align: center;
+}
 .central  {
   text-align: center;
   font-size: 25px

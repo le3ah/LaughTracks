@@ -18,9 +18,9 @@
       <h3>Unfunny, Yet Mildly Interesting Statistics</h3>
         <p></p>
         <p>The average age of all comedians on this site is <%=  @average_age %>.</p>
-        <p></p>
+        <p id="click-below">Do you want to choose your own adventure?</p>
         <p>The average run time of all TV specials on this site is <%= @average_run_time %> minutes.</p>
-        <p></p>
+        <a href="/comedians/new">Click here to create a new comedian!</a>
         <p>The comedians on this site hail from multiple cities in the U.S. & Canada, including <%= @unique_cities.join(', ') %>.</p>
         <p></p>
         <p>The total count of all TV specials on this site is <%= @specials_count %>.</p>
@@ -34,7 +34,7 @@
               <h5 class="card-title"><%= comedian.name %></h5>
               <p class="card-text"><%="Age: #{comedian.age}, born in #{comedian.city} with a total TV special count of #{comedian.specials.count}." %></p>
                 <% comedian.specials.each do |special| %>
-                  <img class="card-img-left" src="<%= special.thumbnail %>"><ul style="list-style: none;">
+                  <img class="card-img-left" src="<%= special.thumbnail %>"><ul>
                   <li class="specials"><em><%= special.special_name %></em></li>
                   <li class="specials"><%= special.run_time %> min</li>
                 </ul>

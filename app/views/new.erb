@@ -1,7 +1,20 @@
-<form action="/comedians" method="post">
-  <p>Enter a New Comedian:</p>
-  <input type='text' name='comedian[name]'/><br/>
-  <input type='integer' name='comedian[age]'/><br/>
-  <input type='text' name='comedian[city]'/><br/>
-  <input type='submit'/>
-</form>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta>
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <title>New Laughs!</title>
+  </head>
+  <body>
+    <form action="/comedians" method="post">
+      <p>Enter a New Comedian:</p>
+        <ul class="new-comedians">
+
+        <li>Comedian Name: <input type='text' name='comedian[name]'/></li><br/>
+        <li>Comedian Age: <input type='integer' name='comedian[age]'/></li><br/>
+        <li>Comedian Hometown: <input type='text' name='comedian[city]'/></li><br/>
+        <input type='submit'/>
+      </ul>
+    </form>
+  </body>
+</html>
