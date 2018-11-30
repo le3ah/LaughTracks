@@ -7,6 +7,10 @@ header  {
 .specials   {
   padding-left: 10px;
 }
+.card-img-left  {
+  align-items: flex-start;
+}
+
 body  {
   background-color: lightblue;
 }

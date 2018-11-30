@@ -25,6 +25,11 @@ class LaughTracksApp < Sinatra::Base
   post '/comedians' do
     comedian = Comedian.new(params[:comedian])
     comedian.save
-    redirect '/comedians' 
+    redirect '/comedians'
+  end
+
+  error Sinatra::NotFound do
+    content_type 'text/plain'
+    [404, 'Temporarily a pleasantly blank page.  Sorry for the convenience.']
   end
 end
