@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta>
-    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
-    <title>New Laughs!</title>
-  </head>
-  <body>
+<head>
+  <meta>
+  <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+  <title>New Laughs!</title>
+</head>
+<body>
+  <div class="form-group">
     <form action="/comedians" method="post">
-      <h1>Enter a New Comedian:</h1>
-        <ul class="new-comedians">
+      <h2>Enter a New Comedian:</h2>
+      <label for="formGroupExampleInput">Comedian Name:</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" name='comedian[name]' placeholder="Comedian Name">
+      <label for="formGroupExampleInput2">Comedian Age:</label>
+      <input type="integer" class="form-control" id="formGroupExampleInput2" name='comedian[age]' placeholder="Comedian Age">
 
-        <li>Comedian Name: <input type='text' name='comedian[name]'/></li><br/>
-        <li>Comedian Age: <input type='integer' name='comedian[age]'/></li><br/>
-        <li>Comedian Hometown: <input type='text' name='comedian[city]'/></li><br/>
-        <input type='submit' value='Submit'/>
-      </ul>
-    </form>
-  </body>
+      <label for="formGroupExampleInput2">Comedian Hometown:</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" name='comedian[city]' placeholder="Comedian Hometown">
+
+    </div>
+  </form>
+</body>
 </html>

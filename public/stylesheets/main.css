@@ -1,6 +1,21 @@
-header  {
+
+body  {
   background-color: lightblue;
 }
+ul  {
+  list-style: none;
+}
+img {
+  height: 55px;
+  float: left;
+}
+a  {
+  text-align: center;
+}
+.jumbotron  {
+  background-color: lightblue;
+}
+
 .card-columns {
   padding-left: 20px;
 }
@@ -11,11 +26,14 @@ header  {
   align-items: flex-start;
 }
 
-body  {
-  background-color: lightblue;
-}
-ul  {
-  list-style: none;
+.central  {
+  text-align: center;
+  font-size: 25px
+  color: lightblue;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 35px;
+  padding-left: 20px;
 }
 #click-below  {
   font-size: 25px;
@@ -27,20 +45,4 @@ ul  {
   grid-gap: 1px;
   grid-auto-rows: minmax(1px, auto);
   text-align: center;
-}
-img {
-  height: 55px;
-  float: left;
-}
-a  {
-  text-align: center;
-}
-.central  {
-  text-align: center;
-  font-size: 25px
-  color: lightblue;
-  padding-top: 15px;
-  padding-right: 10px;
-  padding-bottom: 35px;
-  padding-left: 20px;
 }
