@@ -45,10 +45,3 @@ a  {
   font-size: 25px;
   text-align: center;
 }
-#stats  {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-gap: 1px;
-  grid-auto-rows: minmax(1px, auto);
-  text-align: center;
-}

@@ -17,7 +17,7 @@ RSpec.describe "As a visitor" do
     end
   end
 
-  it "they an area of the page called 'Statistics'" do
+  it "they see an area of the page called 'Statistics'" do
 
     visit '/comedians'
     within "#stats" do
@@ -42,5 +42,12 @@ RSpec.describe "As a visitor" do
     expect(page).to have_content(comedian_name)
     expect(page).to have_content(comedian_age)
     expect(page).to have_content(comedian_hometown)
+  end
+
+  it "they see an error message that is different from Sinatra's error" do
+
+    visit '/comedians/'
+
+    expect(page).to have_content('Sorry for the convenience.')
   end
 end
