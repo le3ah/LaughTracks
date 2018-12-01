@@ -15,9 +15,15 @@ a  {
 .jumbotron  {
   background-color: lightblue;
 }
-
+.container  {
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+}
 .card-columns {
   padding-left: 20px;
+  @include media-breakpoint-only(lg)  {
+    column-count: 3;
+  }
 }
 .specials   {
   padding-left: 10px;
